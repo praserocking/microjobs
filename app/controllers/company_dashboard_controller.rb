@@ -1,4 +1,4 @@
-class DashboardController < ApplicationController
+class CompanyDashboardController < ApplicationController
 	def user_profile
 		@user = User.first
 	end

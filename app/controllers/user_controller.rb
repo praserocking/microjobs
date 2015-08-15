@@ -34,4 +34,12 @@ class UserController < ApplicationController
 			end
 		end
 	end
+
+	def potential_jobs
+		@matches = Jobpost.all
+	end
+
+	def job
+		@job = Jobpost.first
+	end
 end
