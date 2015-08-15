@@ -1,3 +1,4 @@
 Microjobs::Application.routes.draw do
-  get "/" => "Home#index"
+  post "/signup" => "User#signup"
+  get "/signup" => "User#new"
 end
