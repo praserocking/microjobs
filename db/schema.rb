@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150815125433) do
+ActiveRecord::Schema.define(:version => 20150815193941) do
 
   create_table "agents", :force => true do |t|
     t.string   "name"
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(:version => 20150815125433) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
-    t.integer  "mob_num"
+    t.string   "mob_num"
     t.boolean  "available"
     t.string   "preferred_jobs"
     t.string   "password_digest"
