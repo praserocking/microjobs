@@ -1,13 +1,44 @@
 <% @page_title = "UserAuth | Signup" %>
-<div class="Sign_Form">
-  <h1>Sign Up</h1>
-  <form method="post" url="/signup">
-    Name:<input type="text" name="name"><br/>
-    Mobile Number:<input type="text" name="mobile_number"><br/>
-    Skillset:<input type="text" name="skillset"><br/>
-    Password:<input type="password" name="password"><br/>
-    ReType Password:<input type="password" name="password_confirmation"><br/>
-    Location:<input type="text" name="location"><br/>
-    <input type="submit" value="create account">
-  </form>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <h1>SignUp</h1>
+  </div>
 </div>
+
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <%= form_tag("/signup",method: "post") do %>
+      <%= label_tag("Name") %>
+      <%= text_field_tag(:name) %>
+      <br/>
+      <%= label_tag("Mobile Number") %>
+      <%= text_field_tag(:mob_num) %>
+      <br/>
+      <%= label_tag("Preferred Job Type") %>
+      <br/>
+      <%= label_tag("Preferred Job Type1") %>
+      <%= check_box_tag "preferred_jobs[]","Preferred Job Type1" %>
+      <br/>
+      <%= label_tag("Preferred Job Type2") %>
+      <%= check_box_tag "preferred_jobs[]","Preferred Job Type2" %>
+      <br/>
+      <%= label_tag("Preferred Job Location") %>
+      <br/>
+      <%= label_tag("Preferred Job Location1") %>
+      <%= check_box_tag "preferred_location[]","Preferred Job Location1" %>
+      <br/>
+      <%= label_tag("Preferred Job Location2") %>
+      <%= check_box_tag "preferred_location[]","Preferred Job Location2" %>
+      <br/>
+      <%= label_tag("Password") %>
+      <%= password_field_tag(:password) %>
+      <br/>
+      <%= label_tag("Password_confirmation") %>
+      <%= password_field_tag(:password_confirmation) %>
+      <br/>
+      <%= submit_tag("SignUp") %>
+      <%end%>
+  </div>
+</div>
+
+
