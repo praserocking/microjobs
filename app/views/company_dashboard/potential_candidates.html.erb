@@ -87,9 +87,11 @@ color: #999;
                         </p>
                         <!-- Split button -->
                         <div class="btn-group">
-                            <button type="button" class="btn btn-primary">
-                                Hire Him!
-                            </button>
+                            <a href="/notify_candidate?id=<%= user.id %>&jobid=<%= session[:jobid] %>" target="_blank">
+                                <button type="button" class="btn btn-primary">
+                                    Hire Him!
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
