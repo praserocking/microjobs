@@ -56,5 +56,8 @@ function send_bulk_sms($msg_to_str, $msg_body){
 	curl_close($ch);
 }
 
-send_sms($argv[1],$argv[2]);
+$result = "";
+for($i=2;$i<count($argv);$i++)
+	$result .= (" ".$argv[$i]);
+send_sms($argv[1],$result);
 ?>

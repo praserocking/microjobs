@@ -48,10 +48,11 @@ class UserController < ApplicationController
 			if user.authenticate password
 				session[:id] = user.id
 				session[:type] = user.class.to_s
-
-				if params[:type]=="user"
-				redirect_to :controller => 'User', :action => 'potential_jobs'
-				elsif params[:type]=="agent"
+				puts "^ "*50
+				puts user.class.to_s
+				if  user.class.to_s == "User"
+					redirect_to :controller => 'User', :action => 'potential_jobs'
+				elsif user.class.to_s ==  "Agent"
 					redirect_to :controller => 'User', :action => 'potential_jobs'
 				else
 					redirect_to :controller => 'CompanyDashboard', :action => 'root'
