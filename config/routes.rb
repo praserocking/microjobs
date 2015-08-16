@@ -1,4 +1,5 @@
 Microjobs::Application.routes.draw do
+  get "/" =>"User#root"
   post "/signup" => "User#signup"
   get "/signup" => "User#new"
 
@@ -12,6 +13,10 @@ Microjobs::Application.routes.draw do
   get "/job_matches" => "User#potential_jobs"
   get "/job" =>"User#job"
 
+  get "/company_login" =>"CompanyDashboard#root"
+  get "/new_job_post" =>"CompanyDashboard#new_job_post"
+  post "/post_a_job" =>"CompanyDashboard#post_job"
   get "/notify_candidate" => "CompanyDashboard#notify_user"
   
+
 end

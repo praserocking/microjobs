@@ -2,7 +2,17 @@ class CompanyDashboardController < ApplicationController
 	def user_profile
 		@user = User.first
 	end
+	def new_job_post
 
+	end
+	def root
+	end
+	def post_job
+		date = params[:daterange].split("-")
+
+		new_job = Jobpost.new(job_description:params[:job_desc],job_start_date:date[0],job_end_date:date[1],job_type:params[:job_type],job_budget:params[:budget],employees_req:params[:quantity],job_location:params[:job_loc],company_id:session[:id])
+		new_job.save
+	end
 	def job_post
 		@job_posts = Jobpost.where(company_id:session[:id])
 	end
