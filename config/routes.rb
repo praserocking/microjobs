@@ -13,7 +13,7 @@ Microjobs::Application.routes.draw do
 
   get "/notify_candidate" => "CompanyDashboard#notify_user"
 
-  get "/post-a-job" => "CompanyDashboard#job_post"
+  get "/post-a-job" => "CompanyDashboard#new_job_post"
   post "/post-a-job" => "CompanyDashboard#job_post_save"
   
 end

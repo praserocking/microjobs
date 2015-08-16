@@ -7,7 +7,7 @@ class CompanyDashboardController < ApplicationController
 		@matches = User.all
 	end
 
-	def job_post
+	def new_job_post
 
 	end
 
