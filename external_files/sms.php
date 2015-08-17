@@ -7,8 +7,8 @@ function send_sms($msg_to, $msg_body){
 	    'Body'  => $msg_body
 	);
 	 
-	$exotel_sid = "Dummy";
-	$exotel_token = "8cfc50cc117dcf34956b5ab141815bbd6b1c85e1";
+	$exotel_sid = "Your exotel sid";
+	$exotel_token = "Your exotel token";
 	 
 	$url = "https://".$exotel_sid.":".$exotel_token."@twilix.exotel.in/v1/Accounts/".$exotel_sid."/Sms/send";
 	 
